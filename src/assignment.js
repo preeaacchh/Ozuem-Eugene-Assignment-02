@@ -89,6 +89,7 @@ function celsiusToFahrenheit(arrayOfTemperature) {
 
   return arrayOfTempInfo
 }
+
 console.log(result)
 
 assignment.celsiusToFahrenheit = celsiusToFahrenheit;
