@@ -14,15 +14,23 @@ const assignment = {};
  * @returns number the sum of the numbers
  */
 
-let sum = 0
-for (let i = 0; i < arrayOfNumbers.length; i++) {
-    sum += arrayOfNumbers[i];
-}
-console.log(sum);
+// console.log(sum);
 
 function sumOfNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.length;
+  let sum = 0
+
+  for (let i = 0; i < arrayOfNumbers.length; i++) {
+    const number = arrayOfNumbers[i];
+
+    sum += number
+  }
+  
+    return sum
 }
+
+const result = sumOfNumbers('preach')
+console.log(result)
+
 assignment.sumOfNumbers = sumOfNumbers;
 
 /**
@@ -35,14 +43,23 @@ assignment.sumOfNumbers = sumOfNumbers;
  * @returns number the count of even numbers
  */
 
-const even = countEvenNumbers.filter(Number => {
-    return Number % 2 === 0;
-})
-console.log(even);
-
 function countEvenNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.length;
+  var counter = 0
+
+  for (let i = 0; i < arrayOfNumbers.length; i++) {
+    const number = arrayOfNumbers[i];
+    // let evenArray = []
+
+    if (number % 2 == 0) {
+      console.log(number)
+      counter ++
+      // evenArray.push(number)
+    }
+  }
+    return `Counter = ${counter}`
 }
+console.log(result)
+  
 assignment.countEvenNumbers = countEvenNumbers;
 
 /**
@@ -59,10 +76,22 @@ assignment.countEvenNumbers = countEvenNumbers;
  * @param {Array} arrayOfNumbers the array containing temperatures in Celsius to be converted
  * @returns Array the converted temperatures in Fahrenheit
  */
-function celsiusToFahrenheit(arrayOfNumbers) {
-    return arrayOfNumbers;
+function celsiusToFahrenheit(arrayOfTemperature) {
+    let arrayOfTempInfo = []
+
+  for (let i = 0; i < arrayOfTemperature.length; i++) {
+    const temp_in_C = arrayOfTempInfo[i]; //temp in Celsius
+
+    const temp_in_F = (temp_in_C * (9/5)) + 32
+
+    arrayOfTempInfo.push(Math.trunc(temp_in_F))
+  }
+
+  return arrayOfTempInfo
 }
-// assignment.celsiusToFahrenheit = celsiusToFahrenheit;
+console.log(result)
+
+assignment.celsiusToFahrenheit = celsiusToFahrenheit;
 
 
 // ========================
